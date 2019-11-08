@@ -26,7 +26,6 @@
 int main(int argc, char **argv) {
   int index = 0;
   int dxl_comm_result = COMM_TX_FAIL;
-  int dxl_goal_position = 512;
   uint8_t dxl_error = 0;
   uint16_t dxl_present_position = 0;
 
@@ -34,11 +33,13 @@ int main(int argc, char **argv) {
 
   packetHandler();
 
-  if (argc < 2) {
-    fprintf(stderr, "Usage: %s <servo number>", argv[0]);
+  if (argc < 3) {
+    fprintf(stderr, "Usage: %s <servo number> <goal_posirion>", argv[0]);
     return 1;
   }
   int dxl_id = strtol(argv[1], 0, 10);
+  int dxl_goal_position = strtol(argv[2], 0, 10);
+  fprintf(stderr, "servo id:%d, goal position:%d\n", dxl_id, dxl_goal_position);
 
   if (openPort(port_num)) {
     fprintf(stderr, "Opened port\n");
