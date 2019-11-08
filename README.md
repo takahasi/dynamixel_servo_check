@@ -1,6 +1,6 @@
 # dynamixel_servo_check
 
-日本ロボット学会　ロボット工学セミナー　第106回 ロボットの作り方 Dynamixelサーボ動作確認ソフト
+日本ロボット学会　ロボット工学セミナー　第121回 ロボットの作り方 Dynamixelサーボ動作確認ソフト
 
 A simple program that tests if a Dynamixel servo can be contacted and
 controlled.
